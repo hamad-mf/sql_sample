@@ -32,5 +32,11 @@ class HomeScreenController {
     getAllEmoloyee();
   }
 
-  updateEmployee() {}
+  static Future updateEmployee(
+      String newName, String newDesignation, int id) async {
+    await myDatabase.rawUpdate(
+        'UPDATE Employees SET name = ?, designation = ? WHERE id = ?',
+        [newName, newDesignation, id]);
+    getAllEmoloyee();
+  }
 }
