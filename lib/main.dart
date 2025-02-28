@@ -7,7 +7,7 @@ Future<void> main(List<String> args) async {
 
  await HomeScreenController.initDb();
   runApp(MyApp());
-}
+} 
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

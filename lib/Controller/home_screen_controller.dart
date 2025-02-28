@@ -31,7 +31,7 @@ class HomeScreenController {
     await myDatabase.rawDelete('DELETE FROM Employees WHERE id = ?', [id]);
     getAllEmoloyee();
   }
-
+  
   static Future updateEmployee(
       String newName, String newDesignation, int id) async {
     await myDatabase.rawUpdate(
@@ -39,4 +39,7 @@ class HomeScreenController {
         [newName, newDesignation, id]);
     getAllEmoloyee();
   }
+
+
+  
 }
